@@ -64,6 +64,10 @@ spec:
         value: {{ .name }}
       - name: enabled
         value: core
+      - name: hostedSite.bearer_secret_key
+        value: {{ .bearer_secret_key }}
+      - name: hostedSite.ca_secret_key
+        value: {{ .ca_secret_key }}
       - name: clusterGroup.name
         value: {{ $group.name }}
      {{- range $group.helmOverrides }}
