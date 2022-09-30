@@ -90,3 +90,9 @@ dbInitSQL: |-
   );
   alter table if exists inventory.Inventory add constraint FK4gqdqmrew97itl6ola2uh50tu
     foreign key (productMaster_sku_id) references inventory.ProductMaster;
+  GRANT ALL PRIVILEGES ON TABLE coffeeshop.Orders TO coffeeshopuser;
+  GRANT ALL PRIVILEGES ON TABLE coffeeshop.LineItems TO coffeeshopuser;
+  GRANT ALL PRIVILEGES ON TABLE coffeeshop.OutboxEvent TO coffeeshopuser;
+  GRANT ALL PRIVILEGES ON TABLE inventory.Inventory TO coffeeshopuser;
+  GRANT ALL PRIVILEGES ON TABLE inventory.OutboxEvent TO coffeeshopuser;
+  GRANT ALL PRIVILEGES ON TABLE inventory.ProductMaster TO coffeeshopuser;
