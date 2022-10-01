@@ -637,16 +637,16 @@ spec:
         value: apps.perth1.beekhof.net
       - name: global.clusterDomain
         value: perth1.beekhof.net
-      - name: clusterGroup.targetCluster
-        value: perth
       - name: enabled
         value: core
-      - name: hostedSite.bearer_secret_key
-        value: secret/data/hub/cluster_perth
-      - name: hostedSite.ca_secret_key
-        value: secret/data/hub/cluster_perth_ca
+      - name: clusterGroup.targetCluster
+        value: perth
       - name: clusterGroup.name
         value: argo-edge
+      - name: clusterGroup.hostedSite.bearer_secret_key
+        value: secret/data/hub/cluster_perth
+      - name: clusterGroup.hostedSite.ca_secret_key
+        value: secret/data/hub/cluster_perth_ca
       - name: clusterGroup.isHubCluster
         value: "false"
   destination:
@@ -701,10 +701,14 @@ spec:
         value: perth1.beekhof.net
       - name: enabled
         value: plumbing
-      - name: clusterGroup.targetCluster
-        value: perth
       - name: clusterGroup.name
         value: argo-edge
+      - name: clusterGroup.targetCluster
+        value: perth
+      - name: clusterGroup.hostedSite.bearer_secret_key
+        value: secret/data/hub/cluster_perth
+      - name: clusterGroup.hostedSite.ca_secret_key
+        value: secret/data/hub/cluster_perth_ca
       - name: clusterGroup.isHubCluster
         value: "false"
   destination:
@@ -757,16 +761,16 @@ spec:
         value: apps.syd.beekhof.net
       - name: global.clusterDomain
         value: syd.beekhof.net
-      - name: clusterGroup.targetCluster
-        value: sydney
       - name: enabled
         value: core
-      - name: hostedSite.bearer_secret_key
-        value: secret/data/hub/cluster_sydney
-      - name: hostedSite.ca_secret_key
-        value: secret/data/hub/cluster_syndey_ca
+      - name: clusterGroup.targetCluster
+        value: sydney
       - name: clusterGroup.name
         value: argo-edge
+      - name: clusterGroup.hostedSite.bearer_secret_key
+        value: secret/data/hub/cluster_sydney
+      - name: clusterGroup.hostedSite.ca_secret_key
+        value: secret/data/hub/cluster_syndey_ca
       - name: clusterGroup.isHubCluster
         value: "false"
   destination:
@@ -821,10 +825,14 @@ spec:
         value: syd.beekhof.net
       - name: enabled
         value: plumbing
-      - name: clusterGroup.targetCluster
-        value: sydney
       - name: clusterGroup.name
         value: argo-edge
+      - name: clusterGroup.targetCluster
+        value: sydney
+      - name: clusterGroup.hostedSite.bearer_secret_key
+        value: secret/data/hub/cluster_sydney
+      - name: clusterGroup.hostedSite.ca_secret_key
+        value: secret/data/hub/cluster_syndey_ca
       - name: clusterGroup.isHubCluster
         value: "false"
   destination:
