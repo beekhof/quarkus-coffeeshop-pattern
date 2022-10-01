@@ -150,7 +150,15 @@ clusterGroup:
 #      repoURL: https://github.com/vendor/applications.git
 #      targetRevision: main
 
-#  managedSites:
+  managedClusterGroups:
+    argoRegion:
+      name: region-one
+      hostedArgoSites:
+      - name: spoke
+        domain: beekhof-spoke.blueprints.rhecoeng.com
+        bearer_secret_key: secret/data/hub/cluster_spoke
+        ca_secret_key: secret/data/hub/cluster_spoke_ca
+
 #    factory:
 #      name: factory
 #      # repoURL: https://github.com/dagger-refuse-cool/manuela-factory.git
